@@ -9,7 +9,7 @@ class BaseRequest(object):
         self.session.keep_alive = False
 
 
-    def send_get(self,url,data,cookie,get_cookie,header):
+    def send_get(self,url,data,cookie,header):
         res = self.session.get(url=url, params=data,cookies=cookie, headers=header,verify=False)
         return res
 
